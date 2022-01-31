@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf build/ && tsc",
-    "start": "nodemon src/app.ts"
+    "start": "nodemon src/app.ts",
+    "generate": "npx prisma generate",
+    "migrate": "npx prisma migrate dev",
+    "push": "npx prisma db push"
   },
   "repository": {
     "type": "git",
@@ -18,13 +21,13 @@
   },
   "homepage": "https://github.com/maituongluanvn/smb-api#readme",
   "dependencies": {
+    "@prisma/client": "^3.8.1",
     "ajv": "^8.6.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.2",
     "log": "^6.2.0",
     "morgan": "^1.10.0",
     "ts-node": "^10.4.0",
-    "typeorm": "^0.2.41",
     "winston": "^3.3.3"
   },
   "devDependencies": {
