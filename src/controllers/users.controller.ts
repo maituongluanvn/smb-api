@@ -6,9 +6,10 @@ const prisma = new PrismaClient({
 });
 // import blogModel from '../models/blog';
 
-const getUser = async (req: Request, res: Response, next: NextFunction) => {
+const getUsers = async (req: Request, res: Response) => {
   const total = await prisma.users.count({});
   console.log('🚀 ~ getUser ~ total', total);
+  res.status(200).json(total);
 };
 
-export { getUser };
+export { getUsers };
