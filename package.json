@@ -2,9 +2,10 @@
   "name": "smb-api",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./build/src/app.js",
+  "types": "./build/src/app.d.ts",
   "scripts": {
-    "build": "rm -rf build/ && tsc",
+    "build": "rm -rf ./build && tsc",
     "start": "nodemon src/app.ts",
     "generate": "npx prisma generate",
     "migrate": "npx prisma migrate dev",
